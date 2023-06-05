@@ -3,9 +3,9 @@
 % Import libraries
 import cv2
 import matplotlib.pyplot as plt
-
+"""
 % Read photo
-img=cv2.imread("photo.jpg")
+img=cv2.imread("Cory-Professional-Photo-2018.jpg")
 
 % Show image using openCV
 cv2.imshow('original image',img)
@@ -26,7 +26,7 @@ plt.imshow(img[:,:,::-1])
 plt.axis(False)
 plt.savefig('temp.png')
 plt.show()
-
+"""
 % Convert Image to a Pencil Sketch
 def sketch_image(photo, k_size):
     #Read Image
@@ -58,6 +58,6 @@ def sketch_image(photo, k_size):
     cv2.destroyAllWindows()
     
 #Function call
-sketch_image(photo='image_1.png', k_size=7)
+sketch_image(photo='Cory-Professional-Photo-2018.jpg', k_size=7)
 
 
