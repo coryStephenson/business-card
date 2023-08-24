@@ -1,0 +1,73 @@
+% !TEX TS-program = pdflatex
+
+% You could use xelatex for easier font customization,
+%   but it requires more intervention to make FontAwesome work.
+%   see (e.g.) https://tex.stackexchange.com/questions/132888/fontawesome-font-not-found:
+
+
+\documentclass[10pt, oneside, final]{article}
+
+% \usepackage{tikz}
+\usepackage{parskip}           % remove paragraph indents
+\usepackage{graphicx}
+
+% set all margins to 0 and set business card size
+\usepackage[
+  paperwidth = 3.5in,
+  paperheight = 2in,
+  margin = 0.2in,
+  noheadfoot
+]{geometry}
+
+% interline spacing
+\setlength{\baselineskip}{0cm} % between baselines
+\setlength{\topskip}{0pt}      % between header and text block
+
+% wrapping text around figure
+\usepackage{wrapfig}
+
+% --- fonts -----------------------
+% MinionPro is difficult to set up.
+%   see e.g. https://kieranhealy.org/blog/archives/2012/11/10/installing-minion-pro/
+% \usepackage[lf, mathtabular, minionint]{MinionPro} % serif
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+
+\usepackage[
+	semibold, % Use SemiBold instead of Bold
+	oldstyle, % Use oldstyle figures, i.e. numbers that descend below the baseline
+]{ebgaramond} % Use the EB Garamond font
+
+\usepackage{microtype} % Improve typography
+
+\usepackage[scaled = 0.9]{FiraSans}                % sans
+\usepackage[varqu, scaled = 0.95]{zi4}             % mono w/ straight quotes
+\usepackage{fontawesome}                           % FA icons
+
+
+
+
+
+\begin{document}
+
+  \thispagestyle{empty}
+
+  \begin{wrapfigure}{r}{0.3\textwidth}
+  \includegraphics[width = 0.3\textwidth]{./sketch.png}
+  \end{wrapfigure}
+
+  \underline{\large\textsf{\textbf{Cory Stephenson, M.S.}}}
+
+  {Information Systems Security} \\
+
+
+  \emph{Computer Networking | Programming \ Penetration Testing | InfoSec Analyst \\ Cloud Security | Awareness Training}
+
+  \vfill
+  {\faEnvelope} \texttt{coryintenn@gmail.com} \hfill
+  {\faGithub} \texttt{coryStephenson} \\
+  {\faPhone} +1{\textendash}931{\textendash}215{\textendash}5067 \hfill
+  {\faLinkedin} \texttt{corystephenson}
+
+
+\end{document}
